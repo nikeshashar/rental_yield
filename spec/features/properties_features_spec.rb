@@ -18,7 +18,7 @@ describe 'Properties' do
       visit '/properties'
       expect(page).to have_content 'EC1Y 1AA'
       expect(page).to have_content '1000'
-      expect(page).to have_content '200,000'
+      expect(page).to have_content '200000'
     end
   end
 end
