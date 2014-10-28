@@ -1,14 +1,14 @@
+<%= notice %>
+
 <% if @properties.any? %>
   <% @properties.each do |property| %>
     <h2><%= property.postcode %></h2> 
     <h2><%= property.rent %></h2> 
     <h2><%= property.cost %></h2> 
-
     <%= link_to 'Edit property', edit_property_path(property) %>
-
+    <%= link_to 'Delete property', property_path(property), method: :delete %>
   <% end %>
 <% else %>
     No properties yet!
 <% end %>
-
 <%= link_to 'Add a property', new_property_path %>
