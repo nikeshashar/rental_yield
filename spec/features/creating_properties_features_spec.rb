@@ -22,7 +22,7 @@ describe 'creating properties' do
       click_link 'Add a property'
       fill_in "Postcode", with: 'EC1Y'
       click_button 'Create Property'
-      expect(page).to have_content 'errors'
+      expect(page).to have_content 'error'
       expect(page).not_to have_content 'EC1Y'
     end
   end

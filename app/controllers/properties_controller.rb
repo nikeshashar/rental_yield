@@ -8,8 +8,13 @@ class PropertiesController < ApplicationController
   end
 
   def create
-    Property.create(params[:property].permit(:postcode, :cost, :rent))
-    redirect_to '/properties'
+    @property = Property.new(params[:property].permit(:postcode, :cost, :rent))
+    
+    if @property.save 
+      redirect_to '/properties'
+    else
+      render 'new'
+    end
   end
 
   def edit
