@@ -8,5 +8,5 @@
 #     click_button 'Create Property'
 #     expect(page).to have_content 'Rental Yield: 6%'
 #     expect(current_path).to eq '/properties'
-#   enda
+#   end
 # end
