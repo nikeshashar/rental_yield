@@ -9,7 +9,7 @@ class PropertiesController < ApplicationController
 
   def create
     @property = Property.new(params[:property].permit(:postcode, :cost, :rent))
-    
+    @property.user = current_user
     if @property.save 
       redirect_to '/properties'
     else
@@ -18,7 +18,10 @@ class PropertiesController < ApplicationController
   end
 
   def edit
-    @property = Property.find(params[:id])
+    @property = current_user.properties.find(params[:id])
+  rescue ActiveRecord::RecordNotFound
+    flash[:notice] = 'This is not your property!'
+    redirect_to '/properties'
   end
 
   def update
