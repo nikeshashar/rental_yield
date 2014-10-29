@@ -27,8 +27,7 @@ describe 'deleting properties' do
     
     it 'should show an error' do 
       visit '/properties'
-      click_link 'Delete property'
-      expect(page).to have_content 'This is not your property!'
+      expect(page).not_to have_link 'Delete property'
     end
   end
 end

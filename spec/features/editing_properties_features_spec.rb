@@ -28,8 +28,7 @@ describe 'editing properties' do
     end
     it 'should show an error' do 
       visit '/properties'
-      click_link 'Edit property'
-      expect(page).to have_content 'This is not your property!'
+      expect(page).not_to have_link 'Edit property'
     end
 
   end
