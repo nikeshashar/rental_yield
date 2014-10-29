@@ -1,10 +1,12 @@
 require 'rails_helper'
 
 describe 'Properties' do 
-  context 'no properties added' do 
-    it 'should display a prompt to add a new property' do 
-      visit '/properties'
-      expect(page).to have_content 'Sign in'
+  context 'as a logged out user' do 
+    context 'no properties added' do 
+      it 'should display a prompt to sign up' do 
+        visit '/properties'
+        expect(page).to have_content 'Sign in'
+      end
     end
   end
 
@@ -18,8 +20,8 @@ describe 'Properties' do
     it 'should display them' do 
       visit '/properties'
       expect(page).to have_content 'EC1Y 1AA'
-      expect(page).to have_content '1000'
-      expect(page).to have_content '200000'
+      expect(page).to have_content '£ 1,000.00'
+      expect(page).to have_content '£ 200,000.00'
     end
   end
 end

@@ -24,8 +24,8 @@ context 'logged in' do
         fill_in 'Cost', with: 200000
         click_button 'Create Property'
         expect(page).to have_content 'EC1Y 1AA'
-        expect(page).to have_content '1000'
-        expect(page).to have_content '200000'
+        expect(page).to have_content '£ 1,000.00'
+        expect(page).to have_content '£ 200,000.00'
         expect(current_path).to eq '/properties'
       end
     end
