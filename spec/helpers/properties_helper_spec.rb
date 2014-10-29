@@ -1,8 +1,5 @@
 require 'rails_helper'
 
-def number_to_percentage(number, options = {})
-  delegate_number_helper_method(:number_to_percentage, number, options)
-end
 # Specs in this file have access to a helper object that includes
 # the PropertiesHelper. For example:
 #
