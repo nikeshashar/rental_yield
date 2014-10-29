@@ -3,6 +3,7 @@
     <h2><%= property.postcode %></h2> 
     <h2><%= property.rent %></h2> 
     <h2><%= property.cost %></h2> 
+    <h3>Rental Yield: <%= number_to_percentage(property.rental_yield, precision: 2) %></h3>
     <%= link_to 'Edit property', edit_property_path(property) %>
     <%= link_to 'Delete property', property_path(property), method: :delete %>
   <% end %>
