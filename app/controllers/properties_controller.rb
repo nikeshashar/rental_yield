@@ -31,7 +31,11 @@ class PropertiesController < ApplicationController
   end
 
   def destroy
-    @property = Property.find(params[:id])
+   @property = current_user.properties.find(params[:id])
+  rescue ActiveRecord::RecordNotFound
+    flash[:notice] = 'This is not your property!'
+    redirect_to '/properties'
+  else
     @property.destroy
     flash[:notice] = 'Property deleted successfully'
     redirect_to '/properties'
