@@ -20,7 +20,7 @@
                 <ul class="nav masthead-nav">
                   <% if user_signed_in? %>
                     Logged in as <%= current_user.email %>
-                    <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class:"btn btn-md btn-danger", role:"button" %>
+                    <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
                     <%= link_to 'Add a property', new_property_path %>
                   <% else %>
                     <%= link_to 'Sign in', new_user_session_path %>
