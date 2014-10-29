@@ -15,4 +15,5 @@ group :development, :test do
   gem 'capybara'
   gem 'rspec-collection_matchers'
   gem 'rspec-rails'
+  gem 'warden'
 end
