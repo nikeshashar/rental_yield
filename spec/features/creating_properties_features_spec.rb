@@ -3,7 +3,6 @@ require 'rails_helper'
 context 'logged out' do 
   it 'should prompt to sign in' do 
     visit '/properties'
-    click_link 'Add a property'
     expect(page).to have_content 'Sign in'
   end
 end

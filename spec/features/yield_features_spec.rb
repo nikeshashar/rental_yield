@@ -1,4 +1,10 @@
 describe 'creating properties' do 
+
+  before do 
+    @john = User.create(email: "john@rentify.com", password: '12345678', password_confirmation: '12345678')
+    login_as @john
+  end
+  
   it 'shows a form and then displays the information' do 
     visit '/properties'
     click_link 'Add a property'
