@@ -1,6 +1,5 @@
-# Coding Challenge
+## Coding Challenge
 
-We are helping thousands of landlords manage a property portfolio valued in the billions. A healthy return can be gained if investments are made wisely. Our landlords find it extremely useful to compare their properties against others on the market. Smart landlords know how much revenue properties similar to theirs are making on the same street.
 
 ## Task
 
@@ -25,3 +24,29 @@ For bonus points try to include any additional information such as comparison be
 ## Delivery
 
 Please post your code to a GitHub repo, also if you wish a demo can be published using a free Heroku account. 
+
+## Solution
+
+### Requirements
++ Ruby 2.1.2
++ Bundler
++ RSpec 3.0 or greater
+
+### How to set it up
+```sh
+git clone git@github.com:nikeshashar/rental_yield.git
+cd rental_yield
+bundle
+```
+
+### How to run it
+```sh
+Type "rails s" in your terminal
+```
+Go to [localhost:3000](https://localhost:3000) in your browser
+
+### How to test it
+```sh
+cd rental_yield
+rspec
+```
