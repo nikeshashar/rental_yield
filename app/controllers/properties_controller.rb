@@ -25,7 +25,7 @@ class PropertiesController < ApplicationController
   end
 
   def update
-    @property = Property.find(params[:id])
+    @property = current_user.properties.find(params[:id])
     @property.update(params[:property].permit(:postcode, :cost, :rent))
     redirect_to '/properties'
   end
